@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyChart - Home</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div id="toast-container"></div>
+    
+    <header>
+        <nav>
+            <a href="index.html" class="logo">
+                <img src="https://lh3.googleusercontent.com/d/16yO39LKrDdtfqxOe0EH-TY1A2C8CfhIY" alt="MyChart Logo" style="height: 40px;">
+            </a>
+
+            <button class="hamburger-menu" id="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="data-stories.html">Data Stories</a></li>
+                <li><a href="tutorial.html">Tutorial</a></li>
+            </ul>
+            <div id="auth-button">
+                <a href="signin.html" class="nav-button">Sign In</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div id="explore-button">
+                    <img src="https://lh3.googleusercontent.com/d/16yO39LKrDdtfqxOe0EH-TY1A2C8CfhIY" alt="MyChart Logo" style="height: 120px;">
+                </div>
+                <p>"Let your data, tell the story"</p>
+                <div id="explore-button">
+                    <a href="signin.html" class="explore-link">Explore <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="container">
+             <div class="section-grid">
+                 <div>
+                     <h2>What is MyChart?</h2>
+                     <p><strong>MyChart</strong> adalah aplikasi berbasis web yang menerapkan model <em>chart-to-text generation</em> untuk secara otomatis menghasilkan deskripsi tekstual dari gambar grafik dalam Bahasa Indonesia.
+                        Dikembangkan sebagai implementasi dari model Generative AI berbasis <strong>Vision-language Model</strong> (VLM) dan <strong>Natural Language Generation</strong> (NLG),
+                        MyChart dirancang untuk mendukung pemahaman data visual secara cepat, inklusif, dan efisien.</p>
+                 </div>
+                 <img src="https://lh3.googleusercontent.com/d/1PC4Bf3pSeYwqiJMHhj8CxFTmIqYyQBaC" alt="AI Robot analyzing chart">
+             </div>
+        </section>
+
+        <section class="why-mychart container">
+            <h2>Why MyChart?</h2>
+            <div class="features">
+                <div class="feature-item">
+                    <i class="fas fa-bullseye fa-2x icon"></i>
+                    <h3>Accurate</h3>
+                    <p>Deskripsi yang dihasilkan akurat dan relevan dengan data grafik yang disampaikan</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-language fa-2x icon"></i>
+                    <h3>Adaptive</h3>
+                    <p>Mampu membuat deskripsi grafik yang sesuai dengan gaya penulisan dalam bahasa Indonesia</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-people-group fa-2x icon"></i>
+                    <h3>Accessible</h3>
+                    <p>Dirancang untuk memberikan pengalaman yang inklusif dan mudah dipahami oleh semua kalangan pengguna</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="container">
+            <div class="under-the-hood">
+                <h2>Under the Hood</h2>
+                <div class="tabs">
+                    <button class="tab-button active" data-tab="unichart-content">UniChart</button>
+                    <button class="tab-button" data-tab="chartinstruct-content">ChartInstruct-Llama</button>
+                </div>
+                <div id="unichart-content" class="tab-content active">
+                    <p>
+                        <strong>UniChart</strong> merupakan <em>vision-language model</em> universal yang dirancang untuk memahami dan melakukan penalaran terhadap berbagai jenis grafik (Masry et al., 2023). 
+                        Model ini menggunakan arsitektur <strong>vision encoder-decoder</strong>, dengan <em>Donut Swin Transformer</em> sebagai vision encoder dan <em>mBART</em> sebagai text decoder. 
+                        Berbeda dari pendekatan sebelumnya yang tidak memodelkan struktur grafik secara eksplisit, <strong>UniChart</strong> dilatih menggunakan korpus besar yang mencakup beragam jenis grafik dan gaya visual.
+                        Model ini memproses elemen teks, data, dan visual dari grafik, lalu menghasilkan <em>output</em> dalam bahasa alami melalui.
+                        Dengan berbagai <em>pre-training tasks</em> yang mencakup ekstraksi elemen visual (seperti <em>bar chart</em> dan <em>pie chart</em>) hingga pemahaman konseptual grafik, <strong>UniChart</strong> mampu mencapai performa <em>state-of-the-art</em> pada beberapa tugas seperti <em>Chart Summarization</em> dan ChartQA.
+                        <br/>
+
+                        <a href="https://doi.org/10.48550/arXiv.2305.14761" target="_blank" class="btn-paper-link">
+                            <i class="fa-solid fa-book" style="margin-right: 5px;"></i> Lihat Publikasi
+                        </a>
+                    </p>
+                </div>
+                <div id="chartinstruct-content" class="tab-content">
+                    <p>
+                        <strong>ChartInstruct-Llama</strong> adalah model hasil <em>instruction tuning</em> yang dirancang untuk memahami grafik dan mengikuti instruksi berbasis bahasa alami (Masry et al., 2024).
+                        Dengan memanfaatkan dataset yang besar berisi 191.000 instruksi dan 71.000 grafik, model ini mampu menangani berbagai tugas terkait grafik secara lebih luas dan fleksibel.
+                        Secara umum, model ini dibangun mengikuti pendekatan <strong>LLaVA architecture</strong> dengan sedikit modifikasi pada <em>vision encoder</em> dan LLM yang digunakan.
+                        Dua pendekatan yang diusulkan yaitu model berbasis <em>end-to-end system</em> yang menggabungkan <em>vision encoder</em> UniChart dengan LLM yaitu LLaMa (7B), serta model berbasis <em>pipeline system</em> yang mampu mengubah grafik menjadi tabel data sebelum diproses oleh LLM dengan model Flan-T5 (3B).
+                        Hasil eksperimen menunjukkan model ini tidak hanya unggul dalam empat tugas utama yaitu <em>Chart-to-text</em>, ChartQA, OpenCQA, dan ChartFC, tetapi juga memperluas cakupan penerapannya dalam skenario nyata terkait penalaran dan pemahaman grafik.
+                        <br/>
+
+                        <a href="https://doi.org/10.48550/arXiv.2403.09028" target="_blank" class="btn-paper-link">
+                            <i class="fa-solid fa-book" style="margin-right: 5px;"></i> Lihat Publikasi
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="container">
+             <div class="section-grid researcher-section">
+                 <img src="https://lh3.googleusercontent.com/d/1OKttnHqsUS8-6bP_SGrJxQ5SBN-QGaen" style="width: 50%; border-radius: 100%;" alt="About the Researcher">
+                 <div>
+                     <h2>About the Researcher</h2>
+                     <p><strong>MyChart</strong> dikembangkan oleh Rohmad Ali Fatur Rizki, seorang mahasiswa Program Studi D4 Komputasi Statistik Politeknik Statistika STIS, sebagai bagian dari penelitian skripsi yang berjudul "Implementasi <em>Vision-language Model</em> dan <em>Natural Language Generation</em> untuk Otomatisasi Deskripsi Grafik".</p>
+                 </div>
+             </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>© Politeknik Statistika STIS - 2025</p>
+            <div class="social-icons">
+                <a href="https://instagram.com/rohmad.afr" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://linkedin.com/in/rohmad.afr" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/rohmad.afr" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script crossorigin src="assets/js/script.js"></script>
+</body>
+</html>

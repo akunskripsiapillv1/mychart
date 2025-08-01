@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Stories - MyChart</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div id="toast-container"></div>
+
+    <header>
+        <nav>
+            <a href="index.html" class="logo">
+                <img src="https://lh3.googleusercontent.com/d/16yO39LKrDdtfqxOe0EH-TY1A2C8CfhIY" alt="MyChart Logo" style="height: 40px;">
+            </a>
+
+            <button class="hamburger-menu" id="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="data-stories.html" class="active">Data Stories</a></li>
+                <li><a href="tutorial.html">Tutorial</a></li>
+            </ul>
+            <div id="auth-button">
+                <a href="signin.html" class="nav-button">Sign In</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="page-header">
+            <h1>Exploring Malang City Through Data</h1>
+            <p>Halaman ini menyajikan rangkaian narasi data yang dihasilkan secara otomatis oleh MyChart, sebuah sistem berbasis kecerdasan buatan yang dirancang untuk menginterpretasikan grafik statistik.
+                Studi kasus yang digunakan berfokus pada <strong>Kota Malang, Jawa Timur</strong> yang mencakup berbagai topik seperti demografi, sosial ekonomi, pendidikan, kesehatan, dan lainnya.
+                Setiap grafik pada halaman ini dilengkapi dengan deskripsi teks yang dihasilkan langsung oleh model MyChart, sehingga memungkinkan pembaca untuk memahami isi visualisasi data secara lebih mudah, cepat, dan informatif.
+                Melalui pendekatan ini, MyChart tidak hanya menunjukkan kapabilitas teknis dalam menghasilkan deskripsi otomatis, tetapi juga memberikan kontribusi dalam memperluas aksesibilitas informasi berbasis data kepada publik.</p>
+            <div id="explore-button" style="margin-top: 5vh;">
+                <a href="signin.html" class="explore-link">Explore <i class="fa-solid fa-arrow-up-right-from-square"></i></a> 
+            </div>   
+        </div>
+
+        <!-- DATA DEMOGRAFI  -->
+        <section class="story-block">
+            <h2>Demographic Portrait of Malang</h2>
+            <div class="story-content">
+                <p>Kota Malang tidak hanya tumbuh sebagai pusat pendidikan dan budaya di Jawa Timur, tetapi juga sebagai rumah bagi beragam karakteristik penduduk yang membentuk identitas kotanya.
+                Melalui data demografi, kita dapat melihat bagaimana populasi tersebar di berbagai kecamatan, bagaimana komposisi usia dan jenis kelamin membentuk struktur sosial kota,
+                serta bagaimana dinamika kependudukan menjadi fondasi bagi pembangunan di berbagai sektor.</p><br>
+                
+                <p>Berdasarkan data Badan Pusat Statistik dan Disdukcapil Kota Malang Tahun 2024, komposisi penduduk Kota Malang menunjukkan distribusi usia yang relatif seimbang antara laki-laki dan perempuan,
+                dengan total populasi mencapai 889,4 ribu jiwa. Kelompok usia 10–14 tahun menjadi yang paling dominan, diikuti oleh rentang usia produktif seperti 20–24 tahun dan 25–29 tahun.
+                Pola ini menggambarkan struktur demografis yang didominasi oleh penduduk usia muda hingga produktif, sehingga berpotensi mendorong pertumbuhan ekonomi kota ke depan.</p><br>
+            </div>
+
+            <div class="story-interactive-area">
+                <img src="https://lh3.googleusercontent.com/d/11v3J8bBhcsodEKJpIXdxJbmkAKxnYNqw" alt="Demographic Chart" class="story-chart-preview">
+                <div class="story-action">
+                    <h3>Populasi Penduduk per Kecamatan</h3>
+                    <p>Lihat visualisasi data jumlah penduduk di setiap kecamatan Kota Malang beserta deskripsinya.</p>
+                    <button class="btn-view-details" data-modal-target="jumlah-penduduk-modal">
+                        Lihat Detail Grafik <i class="fa-solid fa-magnifying-glass-chart"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div id="jumlah-penduduk-modal-data" style="display: none;">
+                <img src="https://lh3.googleusercontent.com/d/11v3J8bBhcsodEKJpIXdxJbmkAKxnYNqw" alt="Demographic Chart Detail">
+                <div class="modal-text-content">
+                    <h4>Deskripsi Jumlah Penduduk (De Jure) 2024</h4>
+                    <p>Pada tahun 2024, jumlah penduduk (De Jure) di Kecamatan Kedungkandang tercatat sebanyak 217.877 jiwa, di Kecamatan Sukun sebanyak 206.910 jiwa, di Kecamatan Klojen sebanyak 100.818 jiwa, di Kecamatan Blimbing sebanyak 191.907 jiwa, dan di Kecamatan Lowokwaru sebanyak 171.847 jiwa.
+                        Kecamatan Kedungkandang tercatat sebagai wilayah dengan jumlah penduduk (De Jure) terbanyak di Kota Malang, sementara Kecamatan Klojen memiliki jumlah penduduk paling sedikit.</p>
+                </div>
+            </div>
+
+            <div class="story-interactive-area">
+                <img src="https://lh3.googleusercontent.com/d/1_3PQiGULZX01P0YH2uR04tRcnn0Wsd2o" alt="Demographic Chart" class="story-chart-preview">
+                <div class="story-action">
+                    <h3>Laju Pertumbuhan Penduduk per Kecamatan</h3>
+                    <p>Lihat visualisasi data jumlah penduduk di setiap kecamatan Kota Malang beserta deskripsinya.</p>
+                    <button class="btn-view-details" data-modal-target="pertumbuhan-penduduk-modal">
+                        Lihat Detail Grafik <i class="fa-solid fa-magnifying-glass-chart"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div id="pertumbuhan-penduduk-modal-data" style="display: none;">
+                <img src="https://lh3.googleusercontent.com/d/1_3PQiGULZX01P0YH2uR04tRcnn0Wsd2o" alt="Demographic Chart Detail">
+                <div class="modal-text-content">
+                    <h4>Deskripsi Pertumbuhan Penduduk tahun 2023</h4>
+                    <p>Pada tahun 2023, pertumbuhan penduduk di Kecamatan Kedungkandang tercatat sebesar 0,31 persen, di Kecamatan Sukun 0,10 persen, di Kecamatan Klojen mengalami penurunan sebesar -0,04 persen, di Kecamatan Blimbing 0,09 persen, dan di Kecamatan Lowokwaru 0,10 persen.
+                        Dapat disimpulkan bahwa di Kota Malang, Kecamatan Kedungkandang mencatatkan Pertumbuhan Penduduk paling tinggi, yaitu 0,31 Persen, sementara Kecamatan Klojen menunjukkan angka terendah dengan -0,04 Persen.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- DATA SOCIAL EKONOMI  -->
+        <section class="story-block">
+            <h2>Malang’s Economic and Social Landscape</h2>
+            <div class="story-content">
+                <p>Kondisi sosial ekonomi Kota Malang mencerminkan dinamika yang kompleks antara ketersediaan lapangan kerja, pertumbuhan sektor industri, dan geliat Usaha Mikro, Kecil, dan Menengah (UMKM).
+                    Sebagai salah satu pusat pertumbuhan ekonomi di Jawa Timur, Malang menampung banyak tenaga kerja usia produktif yang terus bergerak dalam pasar kerja formal maupun informal.
+                    Di sisi lain, peran sektor industri dan UMKM menjadi pilar penting dalam menjaga stabilitas ekonomi lokal dan membuka peluang usaha di tengah tantangan global.
+                    Melalui data sosial ekonomi, kita dapat memahami lebih jauh tentang tantangan ketenagakerjaan dan potensi sektor produktif di masing-masing kecamatan di Kota Malang.
+                    Bagian ini menguraikan gambaran singkat jumlah pencari kerja terdaftar, sebaran industri, serta kontribusi UMKM terhadap perekonomian kota.</p><br>
+                
+                <p>Berdasarkan data tahun 2024, jumlah pencari kerja terdaftar di Kota Malang mencapai 759 jiwa, dengan proporsi lebih dari dua pertiga merupakan perempuan.
+                    Kecamatan Blimbing mencatat jumlah pencari kerja tertinggi sebanyak 187 jiwa, disusul oleh Kecamatan Sukun (169 jiwa) dan Lowokwaru (161 jiwa).
+                    Sebaliknya, jumlah pencari kerja terendah tercatat di Kecamatan Klojen, yaitu 86 jiwa, yang menunjukkan perbedaan potensi dan tekanan ketenagakerjaan antar wilayah.
+                    Distribusi ini memperlihatkan konsentrasi pencari kerja pada wilayah padat penduduk dan wilayah dengan aktivitas ekonomi tinggi, mencerminkan keterkaitan antara distribusi tenaga kerja dan peluang kerja lokal.
+                    Ketimpangan ini dapat menjadi perhatian dalam perencanaan kebijakan ketenagakerjaan dan program pelatihan berbasis wilayah</p><br>
+            </div>
+            
+            <div class="story-interactive-area">
+                <img src="https://lh3.googleusercontent.com/d/1_Jm30P7P9v36i36b13sXlee0Yh8Lh-Qi" alt="Demographic Chart" class="story-chart-preview">
+                <div class="story-action">
+                    <h3>Jumlah Industri per Kecamatan di Kota Malang</h3>
+                    <p>Lihat visualisasi data jumlah industri di setiap kecamatan Kota Malang beserta deskripsinya.</p>
+                    <button class="btn-view-details" data-modal-target="jumlah-industri-modal">
+                        Lihat Detail Grafik <i class="fa-solid fa-magnifying-glass-chart"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div id="jumlah-industri-modal-data" style="display: none;">
+                <img src="https://lh3.googleusercontent.com/d/1_Jm30P7P9v36i36b13sXlee0Yh8Lh-Qi" alt="Demographic Chart Detail">
+                <div class="modal-text-content">
+                    <h4>Jumlah Industri per Kecamatan di Kota Malang</h4>
+                    <p>Pada tahun 2023, di Kecamatan Kedungkandang terdapat 2.085 unit industri, di Kecamatan Sukun 1.726 unit, di Kecamatan Klojen 1.455 unit, di Kecamatan Blimbing 2.394 unit, dan di Kecamatan Lowokwaru 1.522 unit.
+                        Kecamatan Blimbing tercatat sebagai wilayah dengan jumlah industri terbanyak di Kota Malang, mencapai 2.394 unit, sementara Kecamatan Klojen memiliki jumlah industri paling sedikit, yaitu 1.455 unit.</p>
+                </div>
+            </div>
+
+            <div class="story-interactive-area">
+                <img src="https://lh3.googleusercontent.com/d/1oVT2syMCqCkZxq2Vdgk5rfYrZ8tu8U1V" alt="Demographic Chart" class="story-chart-preview">
+                <div class="story-action">
+                    <h3>Banyaknya Usaha Mikro, Kecil, dan Menengah per Kecamatan</h3>
+                    <p>Lihat visualisasi data jumlah UMKM di setiap kecamatan Kota Malang beserta deskripsinya.</p>
+                    <button class="btn-view-details" data-modal-target="jumlah-umkm-modal">
+                        Lihat Detail Grafik <i class="fa-solid fa-magnifying-glass-chart"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div id="jumlah-umkm-modal-data" style="display: none;">
+                <img src="https://lh3.googleusercontent.com/d/1oVT2syMCqCkZxq2Vdgk5rfYrZ8tu8U1V" alt="Demographic Chart Detail">
+                <div class="modal-text-content">
+                    <h4>Banyaknya Usaha Mikro, Kecil, dan Menengah per Kecamatan</h4>
+                    <p>Pada tahun 2023, terdapat 4.402 unit Usaha Mikro Kecil Menengah (UMKM) di Kecamatan Kedungkandang, 6.011 unit di Kecamatan Sukun, 3.850 unit di Kecamatan Klojen, 5.347 unit di Kecamatan Blimbing, dan 9.448 unit di Kecamatan Lowokwaru.
+                        Kecamatan Lowokwaru tercatat sebagai wilayah dengan jumlah Usaha Mikro Kecil Menengah (UMKM) terbanyak di Kota Malang, yakni sejumlah 9.448 unit, sementara Kecamatan Klojen memiliki jumlah UMKM yang paling sedikit, yaitu 3.850 unit.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="modal" id="chart-modal">
+            <div class="modal-overlay"></div>
+            <div class="modal-content">
+                <button class="modal-close">&times;</button>
+                <div id="modal-body-content">
+                    </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>© Politeknik Statistika STIS - 2025</p>
+            <div class="social-icons">
+                <a href="https://instagram.com/rohmad.afr" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://linkedin.com/in/rohmadafr" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/rohmadafr" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

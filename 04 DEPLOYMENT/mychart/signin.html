@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In - MyChart</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div id="toast-container"></div>
+    <div class="signin-container">
+        <div class="signin-box">
+            <h1>Sign in</h1>
+            <p>Start exploring with MyChart</p>
+            <form id="signin-form">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="example@gmail.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="password-wrapper">
+                        <input type="password" id="password" placeholder="password" required>
+                        <i class="fa-solid fa-eye" id="toggle-password"></i>
+                    </div>
+                </div>
+                <button type="submit" class="signin-btn">Sign in</button>
+            </form>
+            <a href="index.html" class="back-home-link">Back to Home</a>
+        </div>
+    </div>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

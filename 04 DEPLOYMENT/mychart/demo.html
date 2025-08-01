@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo - MyChart</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div id="toast-container"></div>
+
+    <header>
+        <nav>
+            <a href="index.html" class="logo">
+                <img src="https://lh3.googleusercontent.com/d/16yO39LKrDdtfqxOe0EH-TY1A2C8CfhIY" alt="MyChart Logo" style="height: 40px;">
+            </a>
+
+            <button class="hamburger-menu" id="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="data-stories.html">Data Stories</a></li>
+                <li><a href="tutorial.html">Tutorial</a></li>
+            </ul>
+            <!-- <div id="auth-button">
+                <a href="signin.html" class="nav-button">Sign In</a>
+            </div> -->
+            <div class="nav-extra">
+                <div id="quota-display" style="display: none;"></div>
+                <div id="auth-button">
+                    <!-- Tombol Sign Out akan muncul di sini -->
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="page-header">
+            <h1>Chart-to-text Generation</h1>
+        </div>
+        
+        <div class="demo-container">
+            <div class="input-tabs">
+                <button class="input-tab-button active" data-tab="upload-tab">Upload File</button>
+                <button class="input-tab-button" data-tab="url-tab">URL Gambar</button>
+            </div>
+
+            <div id="upload-tab" class="input-content active">
+                <div class="demo-section">
+                    <h3>Unggah gambar grafik:</h3>
+                    <div id="drop-area">
+                        <div id="drop-area-prompt">
+                            <p>Drag and drop file atau klik untuk browse</p>
+                        </div>
+                        <div id="drop-area-preview"></div>
+                    </div>
+                    <input type="file" id="file-input" accept="image/*" hidden>
+                </div>
+                <div class="demo-section">
+                    <h3>Pilih model:</h3>
+                    <div class="model-selection">
+                        <div class="model-option selected" data-model="chartinstruct">
+                            <h4>ChartInstruct-Llama</h4>
+                            <p>Optimal untuk grafik statistik dan modern</p>
+                        </div>
+                        <div class="model-option" data-model="UniChart">
+                            <h4>UniChart</h4>
+                            <p>Versatile untuk berbagai jenis visualisasi</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="url-tab" class="input-content">
+                <div class="demo-section">
+                     <h3>Unggah gambar grafik:</h3>
+                     <input type="text" id="url-input" placeholder="https://example.com/chart.png">
+                </div>
+                <div class="demo-section">
+                    <h3>Pilih model:</h3>
+                    <div class="model-selection">
+                        <div class="model-option selected" data-model="chartinstruct">
+                            <h4>ChartInstruct-Llama</h4>
+                            <p>Optimal untuk grafik statistik dan modern</p>
+                        </div>
+                        <div class="model-option" data-model="UniChart">
+                            <h4>UniChart</h4>
+                            <p>Versatile untuk berbagai jenis visualisasi</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="image-preview-container" style="display: none;">
+                <h3>Image Preview:</h3>
+                <img id="preview-image-element" src="#" alt="Image Preview"/>
+            </div>
+        
+            
+            <button id="generate-btn" class="generate-btn">
+                Generate <i class="fas fa-arrow-right"></i>
+            </button>
+
+            <div class="result-box" id="result-box">
+                <div class="loader" id="loader"></div>
+                <p class="placeholder" id="result-placeholder">Result will appear here...</p>
+                <div id="result-content" style="display: none;">
+                    <div class="result-header">
+                        <h3>Hasil deskripsi:</h3>
+                        <button id="copy-btn" class="copy-btn">Copy</button>
+                    </div>
+                    <p id="description-text"></p>
+                    <br>
+                    <div class="result-meta">
+                        <span id="model-used"></span><br>
+                        <span id="response-time"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>© Politeknik Statistika STIS - 2025</p>
+            <div class="social-icons">
+                <a href="https://instagram.com/rohmad.afr" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://linkedin.com/in/rohmadafr" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/rohmadafr" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
